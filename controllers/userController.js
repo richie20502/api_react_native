@@ -37,3 +37,12 @@ exports.login = async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 };
+
+exports.listUsers = async (req, res) => {
+    try {
+        const users = await User.find({}, '_id username email');
+        res.status(200).send(users);
+    } catch (error) {
+        res.status(500).send('Internal Server Error');
+    }
+};
