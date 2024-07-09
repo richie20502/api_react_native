@@ -11,6 +11,9 @@ const options = {
         },
         servers: [
             {
+                url: 'http://localhost:3000'
+            },
+            {
                 url: "https://api-react-native-ys7b.onrender.com"
             }
         ]

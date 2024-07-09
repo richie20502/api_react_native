@@ -19,6 +19,9 @@ swaggerSetup(app);
 const userRoutes = require('./routes/user');
 app.use('/api/users', userRoutes);
 
+const productRoutes = require('./routes/product');
+app.use('/api/products', productRoutes);
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
